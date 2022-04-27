@@ -1,3 +1,5 @@
+<img width=720 alt=IMG src=cover.jpg>
+
 <img width=240 alt=IMG src=notion_github_tag.png>
 
 このリポジトリは Bricoleur & Toolsmith : watanabe3tipapa の遊び場です。  
