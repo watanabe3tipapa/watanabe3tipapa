@@ -4,4 +4,4 @@
 
 順次更新していきますのでよろしくお願いします。
 
-まずは[こちら](https://watanabe3tipapa.github.io/index/)からご覧ください。
+
