@@ -2,6 +2,6 @@
 
 > このリポジトリは Bricoleur & Toolsmith : watanabe3tipapa の遊び場です。  
 
-
+> [Wiki](https://github.com/watanabe3tipapa/watanabe3tipapa/wiki)
 
 
