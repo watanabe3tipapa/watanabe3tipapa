@@ -1,4 +1,4 @@
-> ###[Wiki](https://github.com/watanabe3tipapa/watanabe3tipapa/wiki)
+### [Wiki](https://github.com/watanabe3tipapa/watanabe3tipapa/wiki)
 
 <img width=720 alt=IMG src=cover.jpg>
 
