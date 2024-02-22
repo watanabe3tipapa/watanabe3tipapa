@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://watanabe3tipapa.github.io',
+	site: 'https://github-papa.watanabe3ti.com',
+	base: '/watanabe3tipapa',
 	integrations: [mdx(), sitemap()],
 });
