@@ -1,20 +1,23 @@
 {
-  "name": "github-watanabe3tipapa",
+  "name": "watanabe3tipapa-portal",
+  "version": "0.2.0",
+  "private": true,
   "type": "module",
-  "version": "0.0.1",
+  "description": "Personal portal for Toru Watanabe, Bricoleur & Toolsmith.",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "check": "astro check",
+    "build": "npm run check && astro build",
+    "preview": "astro preview"
   },
-  "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
-    "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.1.1",
-    "astro": "^4.4.2",
-    "@astrojs/check": "^0.5.5",
-    "typescript": "^5.3.3"
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.4",
+    "typescript": "^5.9.3"
   }
 }
