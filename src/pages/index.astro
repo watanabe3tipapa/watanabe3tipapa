@@ -9,22 +9,22 @@ const description = 'Toru Watanabe の制作・研究・ドキュメントをつ
 
 const destinations = [
   {
-    eyebrow: '01 / PORTAL',
-    title: 'Main site',
-    description: '公開中のサイト、サービス、制作物を一覧できるメインポータルです。',
-    href: 'https://watanabe3tipapa.github.io/',
+    eyebrow: '01 / CATALOG',
+    title: 'All sites & services',
+    description: '公開中のサイト、サービス、制作物を横断して確認する最新の一覧です。',
+    href: 'https://watanabe3tipapa.github.io/index/',
   },
   {
-    eyebrow: '02 / WORKS',
+    eyebrow: '02 / DOCUMENTATION',
+    title: 'next',
+    description: '公開経路、設計判断、Quarto・GitHub Pagesの運用を記録する構築ノートです。',
+    href: 'https://next.watanabe3ti.com/',
+  },
+  {
+    eyebrow: '03 / WORKS',
     title: 'Projects',
     description: 'CLI、スクリプト、Webサイト、教材など、実用的な道具づくりの記録です。',
     href: 'https://watanabe3tipapa.github.io/projects/project.html',
-  },
-  {
-    eyebrow: '03 / NOTES',
-    title: 'Articles',
-    description: '試行錯誤から得た知見やメモを、読み返せる形で残しています。',
-    href: 'https://watanabe3tipapa.github.io/articles/note.html',
   },
   {
     eyebrow: '04 / SOURCE',
@@ -51,8 +51,8 @@ const destinations = [
             <strong>Bricoleur &amp; Toolsmith</strong> として、ターミナル操作、CLIツール、Webサイト、教材、自由研究を横断しながら、必要なものを必要なだけつくっています。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://watanabe3tipapa.github.io/" target="_blank" rel="noreferrer">
-              メインポータルへ <span aria-hidden="true">↗</span>
+            <a class="button button-primary" href="https://watanabe3tipapa.github.io/index/" target="_blank" rel="noreferrer">
+              公開サイト一覧へ <span aria-hidden="true">↗</span>
             </a>
             <a class="button button-quiet" href={`${base}/about/`}>活動について</a>
           </div>
@@ -72,7 +72,7 @@ const destinations = [
         <div class="section-heading">
           <p class="eyebrow">Explore</p>
           <h2 id="destinations-title">制作と記録への入口</h2>
-          <p>このリポジトリは、個人ポータルの案内役です。興味のあるテーマから、各コンテンツへ進めます。</p>
+          <p>このリポジトリは、個人としての活動を案内する入口です。現在の公開資産は一覧へ、設計・運用の背景はnextへつなぎます。</p>
         </div>
         <div class="destination-grid">
           {destinations.map((destination) => (
