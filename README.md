@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/bg.jpg" alt="banner" width="100%">
+</div>
+
 # watanabe3tipapa
 
 > **v0.2.1** · Bricoleur & Toolsmithとしての活動を案内する個人ポータル。
