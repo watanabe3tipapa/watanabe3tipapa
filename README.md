@@ -6,6 +6,52 @@
 
 > **v0.2.1** · Bricoleur & Toolsmithとしての活動を案内する個人ポータル。
 
+---
+
+## GitHub プロフィール
+
+<p align="center">
+  <img
+    src="https://github-stats-extended.vercel.app/api?username=watanabe3tipapa&show_icons=true&theme=transparent&hide_border=true&bg_color=FFFAD7&title_color=000000&text_color=000000&icon_color=FF6B6B"
+    alt="GitHub Stats"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://github-stats-extended.vercel.app/api/top-langs/?username=watanabe3tipapa&layout=compact&theme=transparent&hide_border=true&bg_color=FFFAD7&title_color=000000&text_color=000000"
+    alt="Top Languages"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/watanabe3tipapa/watanabe3tipapa/main/profile-summary-card-output/default/0-profile-details.svg"
+    alt="Profile Details"
+  />
+</p>
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/watanabe3tipapa/watanabe3tipapa/main/profile-summary-card-output/default/1-repos-per-language.svg" alt="Repos per Language" />
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/watanabe3tipapa/watanabe3tipapa/main/profile-summary-card-output/default/2-most-commit-language.svg" alt="Most Commit Language" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/watanabe3tipapa/watanabe3tipapa/main/profile-summary-card-output/default/3-stats.svg" alt="Stats" />
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/watanabe3tipapa/watanabe3tipapa/main/profile-summary-card-output/default/4-productive-time.svg" alt="Productive Time" />
+    </td>
+  </tr>
+</table>
+
+---
+
 概要
 
 このリポジトリは個人としての活動・制作・連絡先を案内する入口としてのポータル実装を含みます。公開サイト、本サイト（ポータル）、および設計・運用に関する記録を分離した3つのリポジトリ群のうちの1つです。
