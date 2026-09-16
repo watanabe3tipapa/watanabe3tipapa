@@ -90,3 +90,11 @@ GitHub プロフィール README に統計カードを組み込み、Neo-Brutali
 - **トークースコープ**: Summary Cards の `0-profile-details` は `email` フィールドを含むため、トークンに `read:user`（または `user:email`）が必要。`repo` のみでは毎回失敗してワークフローが赤くなる。`SUMMARY_CARDS_TOKEN`（および Vercel の `PAT_1`）には `public_repo` + `read:user` を付与すること。
 - **THEME 未指定の破滅**: `THEME` を渡さないと全90テーマのカード（約260ファイル）が生成されリポジトリが肥大化した。必ず `THEME: default` を指定する。
 - **デプロイの罠**: `github-stats-extended` のビルドは Node 24 必須（システム Node が v25 だと engines エラー）。`~/.local/node24/bin` を PATH 先頭に置く。アップストリームのビルドバグ対策として `apps/backend/vercel.json` の `git clean ./apps -fx` を `git clean ./apps -fdx` にパッチ済み（リポジトリルートで実行しないと "Not a git repository" になる）。env var を変更したら再デプロイが要る。
+
+### リリース
+
+| 項目 | 内容 |
+| --- | --- |
+| コミット | `5615ff5` 等 — 一連のプロフィール統計導入 |
+| Gitタグ | `v0.3.0` |
+| 公開URL | <https://github.com/watanabe3tipapa/watanabe3tipapa> |
