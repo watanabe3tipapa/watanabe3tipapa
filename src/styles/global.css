@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --surface: #f5f7f8;
-  --surface-raised: #ffffff;
-  --ink: #172033;
-  --muted: #5f697b;
-  --line: #dbe2e8;
-  --accent: #285f82;
-  --accent-deep: #1c4662;
-  --accent-soft: #edf6fa;
-  --warm: #e9a754;
+  --surface: #FFFAD7;
+  --surface-raised: #FFFFFF;
+  --ink: #111111;
+  --muted: #454545;
+  --line: #111111;
+  --accent: #FF6B6B;
+  --accent-deep: #E84040;
+  --accent-soft: #FFE8E6;
+  --warm: #FFD93D;
+  --mint: #6FF7D0;
+  --sky: #6CB6FF;
   --font-sans: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'DM Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
 }
@@ -27,9 +29,11 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% -10%, #dceef4 0, transparent 31rem),
-    radial-gradient(circle at 95% 15%, #f8ecd9 0, transparent 25rem),
+    radial-gradient(circle at 8% -10%, #fff3a6 0, transparent 30rem),
+    radial-gradient(circle at 95% 15%, #ffe3de 0, transparent 24rem),
+    radial-gradient(var(--ink) 1px, transparent 1px),
     var(--surface);
+  background-size: auto, auto, 22px 22px, auto;
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.75;
@@ -37,17 +41,18 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-deep);
+  font-weight: 600;
 }
 
 a:hover {
-  color: var(--accent-deep);
+  color: var(--ink);
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--warm) 75%, white);
-  outline-offset: 3px;
+  outline: 3px solid var(--warm);
+  outline-offset: 2px;
 }
 
 img {
@@ -65,14 +70,14 @@ p {
 h1,
 h2,
 h3 {
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 ::selection {
   color: var(--ink);
-  background: #cfe8f2;
+  background: var(--warm);
 }
 
 .sr-only {

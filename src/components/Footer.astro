@@ -25,8 +25,9 @@ const base = import.meta.env.BASE_URL;
 <style>
   footer {
     margin-top: 5rem;
-    border-top: 1px solid var(--line);
+    border-top: 3px solid var(--ink);
     background: var(--surface-raised);
+    box-shadow: 0 -3px 0 #fff, 0 -6px 0 var(--ink);
   }
 
   .footer-shell {
@@ -52,12 +53,6 @@ const base = import.meta.env.BASE_URL;
     letter-spacing: 0.04em;
   }
 
-  .footer-note,
-  small {
-    color: var(--muted);
-    font-size: 0.78rem;
-  }
-
   .footer-note {
     margin-top: 0.35rem;
   }
@@ -68,21 +63,39 @@ const base = import.meta.env.BASE_URL;
     gap: 0.35rem 1rem;
   }
 
-  .footer-links a {
+  .footer-title {
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .footer-note,
+  small {
     color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .footer-links a {
+    color: var(--ink);
     font-family: var(--font-mono);
     font-size: 0.75rem;
+    font-weight: 700;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 120ms ease, color 120ms ease;
   }
 
   .footer-links a:hover {
-    color: var(--accent);
+    color: var(--accent-deep);
+    border-bottom-color: var(--accent-deep);
   }
 
   .footer-bottom {
     padding-top: 1rem;
     padding-bottom: 1.25rem;
-    border-top: 1px solid var(--line);
+    border-top: 2px solid var(--ink);
   }
 
   @media (max-width: 620px) {

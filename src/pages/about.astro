@@ -82,11 +82,16 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
   }
 
   .eyebrow {
+    display: inline-block;
     margin-bottom: 1rem;
-    color: var(--accent);
+    padding: 0.3rem 0.55rem;
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    background: var(--warm);
+    box-shadow: 3px 3px 0 var(--ink);
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
+    font-size: 0.68rem;
+    font-weight: 700;
     letter-spacing: 0.09em;
     text-transform: uppercase;
   }
@@ -113,7 +118,7 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
     grid-template-columns: minmax(15rem, 1fr) minmax(20rem, 1.2fr);
     gap: 3rem;
     padding: 4.5rem 0;
-    border-top: 1px solid var(--line);
+    border-top: 3px solid var(--ink);
   }
 
   h2 {
@@ -130,7 +135,7 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
 
   .areas {
     padding: 4.5rem 0;
-    border-top: 1px solid var(--line);
+    border-top: 3px solid var(--ink);
   }
 
   .areas > h2 { margin-bottom: 2rem; }
@@ -138,24 +143,38 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
   .area-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    border-top: 1px solid var(--line);
-    border-left: 1px solid var(--line);
+    border-top: 3px solid var(--ink);
+    border-left: 3px solid var(--ink);
   }
 
   .area-grid article {
     min-height: 14rem;
     padding: 1.5rem;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    border-right: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
     background: var(--surface-raised);
+    transition: background 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+  }
+
+  .area-grid article:hover {
+    background: var(--accent-soft);
+    box-shadow: 6px 6px 0 var(--ink);
+    transform: translate(-4px, -4px);
   }
 
   .area-grid span {
-    display: block;
+    display: inline-grid;
+    width: 2.2rem;
+    height: 2.2rem;
     margin-bottom: 2.5rem;
-    color: var(--accent);
+    place-items: center;
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    background: var(--sky);
+    box-shadow: 2px 2px 0 var(--ink);
     font-family: var(--font-mono);
     font-size: 0.72rem;
+    font-weight: 700;
   }
 
   h3 {
@@ -171,7 +190,7 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
 
   .contact {
     padding: 4.5rem 0 0;
-    border-top: 1px solid var(--line);
+    border-top: 3px solid var(--ink);
   }
 
   .contact > h2 { margin-bottom: 1.5rem; }
@@ -187,22 +206,27 @@ const description = 'Bricoleur & Toolsmith としての活動方針と、公開�
     align-items: center;
     gap: 0.6rem;
     padding: 0.75rem 0.95rem;
-    border: 1px solid var(--line);
-    border-radius: 0.65rem;
+    border: 3px solid var(--ink);
+    border-radius: 0;
     color: var(--ink);
     background: var(--surface-raised);
+    box-shadow: 4px 4px 0 var(--ink);
     font-family: var(--font-mono);
     font-size: 0.8rem;
+    font-weight: 700;
     text-decoration: none;
+    transition: background 120ms ease, transform 120ms ease, box-shadow 120ms ease;
   }
 
   .contact-links a:hover {
-    border-color: #afcedd;
-    color: var(--accent-deep);
-    background: #f9fcfd;
+    border-color: var(--ink);
+    color: var(--ink);
+    background: var(--mint);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
   }
 
-  .contact-links span { color: var(--accent); }
+  .contact-links span { color: var(--accent-deep); }
 
   @media (max-width: 720px) {
     main { padding: 2.5rem 1rem 0; }
