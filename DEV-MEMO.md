@@ -58,3 +58,35 @@ GitHub Actions の `Deploy portal to GitHub Pages` はコミット `d8f8dc8` で
 ### 検証予定
 
 `npm ci`、`npm run build`、GitHub Pagesデプロイ、公開トップページの導線を順に確認する。
+
+## 2026-09-16 : Neo-Brutalism プロフィール統計導入
+
+### 目的
+
+GitHub プロフィール README に統計カードを組み込み、Neo-Brutalism デザイン（淡黄 `#FFFAD7` 背景、黒文字、赤アクセント `#FF6B6B`）に合わせて一体感のある自己紹介へ刷新した。
+
+### 実装内容
+
+| 区分 | 変更内容 |
+| --- | --- |
+| README | 「GitHub プロフィール」セクションを追加し、Stats / Top Languages の2枚を自前 Vercel、Summary Cards の5枚を `profile-summary-card-output/default/` から表示する構成とした。 |
+| ワークフロー | `.github/workflows/profile-summary-cards.yml` を追加。毎日 0:00 実行 + 手動実行で `vn7n24fzkq/github-profile-summary-cards@release` を動かし `SUMMARY_CARDS_TOKEN` でカードを生成・コミットする。`THEME: default`・`UTC_OFFSET: +9` を指定。 |
+| Vercel インスタンス | オリジナル `github-readme-stats` の共有インスタンスが `DEPLOYMENT_PAUSED` のため、後継 `stats-organization/github-stats-extended`（release v2.2.0）を**フォークせず**ローカルビルドして `https://github-stats-extended.vercel.app` へ直接デプロイした。Vercel の production env `PAT_1` に GitHub PAT を設定。 |
+
+### 検証結果
+
+自前 Vercel の `/api?username=watanabe3tipapa...` と `/api/top-langs?...` は HTTP 200 かつ実データ表示。Summary Cards は `default/` の5枚（`0-profile-details` / `1-repos-per-language` / `2-most-commit-language` / `3-stats` / `4-productive-time`）が生成され、raw.githubusercontent.com が HTTP 200 で配信することを確認した。
+
+### リリース
+
+| 項目 | 内容 |
+| --- | --- |
+| コミット | `7172393` — 導入、`5615ff5` — THEME 制限 |
+| 生成コミット | `13565af`（全テーマ）→ 削除 → `08252d0`（default 5枚） |
+| 公開URL | <https://github.com/watanabe3tipapa/watanabe3tipapa> |
+
+### よもやま・注意点
+
+- **トークースコープ**: Summary Cards の `0-profile-details` は `email` フィールドを含むため、トークンに `read:user`（または `user:email`）が必要。`repo` のみでは毎回失敗してワークフローが赤くなる。`SUMMARY_CARDS_TOKEN`（および Vercel の `PAT_1`）には `public_repo` + `read:user` を付与すること。
+- **THEME 未指定の破滅**: `THEME` を渡さないと全90テーマのカード（約260ファイル）が生成されリポジトリが肥大化した。必ず `THEME: default` を指定する。
+- **デプロイの罠**: `github-stats-extended` のビルドは Node 24 必須（システム Node が v25 だと engines エラー）。`~/.local/node24/bin` を PATH 先頭に置く。アップストリームのビルドバグ対策として `apps/backend/vercel.json` の `git clean ./apps -fx` を `git clean ./apps -fdx` にパッチ済み（リポジトリルートで実行しないと "Not a git repository" になる）。env var を変更したら再デプロイが要る。
