@@ -81,20 +81,18 @@ GitHub プロフィール README に統計カードを組み込み、Neo-Brutali
 
 | 項目 | 内容 |
 | --- | --- |
-| コミット | `7172393` — 導入、`5615ff5` — THEME 制限 |
+| コミット | `7172393` — 導入、`5615ff5` — THEME 制限、`e9eb1c6` — release: v0.3.0 |
 | 生成コミット | `13565af`（全テーマ）→ 削除 → `08252d0`（default 5枚） |
+| Gitタグ | `v0.3.0` |
+| GitHub Release | [v0.3.0](https://github.com/watanabe3tipapa/watanabe3tipapa/releases/tag/v0.3.0) |
 | 公開URL | <https://github.com/watanabe3tipapa/watanabe3tipapa> |
+
+### プロフィール特化と資料分離
+
+このリポジトリは特別リポジトリであり README が公開プロフィールとして表示されるため、README を統計グリッドとクイックリンク中心のプロフィール表示へ整理した。開発手順・構成表・変更履歴などの内部向け資料は `PROJECT_NOTES.md` へ分離した。あわせてリポジトリの topics と About の説明文も Neo-Brutalism プロフィールに合わせて更新した。
 
 ### よもやま・注意点
 
 - **トークースコープ**: Summary Cards の `0-profile-details` は `email` フィールドを含むため、トークンに `read:user`（または `user:email`）が必要。`repo` のみでは毎回失敗してワークフローが赤くなる。`SUMMARY_CARDS_TOKEN`（および Vercel の `PAT_1`）には `public_repo` + `read:user` を付与すること。
 - **THEME 未指定の破滅**: `THEME` を渡さないと全90テーマのカード（約260ファイル）が生成されリポジトリが肥大化した。必ず `THEME: default` を指定する。
 - **デプロイの罠**: `github-stats-extended` のビルドは Node 24 必須（システム Node が v25 だと engines エラー）。`~/.local/node24/bin` を PATH 先頭に置く。アップストリームのビルドバグ対策として `apps/backend/vercel.json` の `git clean ./apps -fx` を `git clean ./apps -fdx` にパッチ済み（リポジトリルートで実行しないと "Not a git repository" になる）。env var を変更したら再デプロイが要る。
-
-### リリース
-
-| 項目 | 内容 |
-| --- | --- |
-| コミット | `5615ff5` 等 — 一連のプロフィール統計導入 |
-| Gitタグ | `v0.3.0` |
-| 公開URL | <https://github.com/watanabe3tipapa/watanabe3tipapa> |
